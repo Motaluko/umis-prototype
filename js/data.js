@@ -27,28 +27,28 @@ window.UMISData = (() => {
     { id: 'OG2', name: 'Ogden Hall 2', capacity: 260, space: 19, min: 200, max: 500 }
   ];
   const worship = [
-    ['Bethel Chapel', 'Bethel Hall Auditorium', 'Adebowale Adesanya', -1], ['Beula Chapel', 'Platinum Hall Auditorium', 'Emmanuel Eregare', 2],
-    ['Canaan Land Chapel', 'Nelson Mandela Auditorium', 'Afanga Sylvester', 0], ['Christ Our Foundation Church', 'Law Activity Hall Iperu Campus', 'Emereonye Ndubuisi M.', 9],
-    ['Covenant Chapel', 'White Hall Auditorium', 'Gambo Daudu', 25], ['Dominion Chapel', 'Ogden Hall Auditorium', 'Biague Labiugubissial', 0],
-    ['Glory Land Chapel', 'Winslow Hall', 'Gift Okan-Gbenedio', 0], ['Grace Chapel', 'WRA', 'Chukwuemeka Abaribe', -1],
-    ['Heir of the Kingdom Chapel', 'BUTH 600 Seater', 'John Sotunsa', -1], ['Heritage Church', 'Old Cafeteria', 'Adeoti J.A.F', 6],
-    ['Light House Chapel', 'Queen Esther Auditorium', 'Jonathan Ikhane', 0], ['Living Springs', 'Samuel Akande Auditorium', 'Michael Akpa', 0],
-    ['Maranatha Chapel', 'Sapphire Activity Hall', 'Abel Akinpelu', 20], ['Mount Zion', 'Gideon Troopers', 'Kalu Daniel', -1],
-    ['Open Heavens Chapel', 'Daniel Hall Auditorium', 'Babatunde Oladipo', 8], ['Streams of Joy', 'Bells Hall', 'Oluwaseun Akinyemi', 4]
-  ].map((r, i) => ({ id: `WC${String(i + 1).padStart(2, '0')}`, name: r[0], location: r[1], pastor: r[2], space: r[3] }));
+    ['Bethel Chapel', 'Bethel Hall Auditorium', -1], ['Beula Chapel', 'Platinum Hall Auditorium', 2],
+    ['Canaan Land Chapel', 'Nelson Mandela Auditorium', 0], ['Christ Our Foundation Church', 'Law Activity Hall Iperu Campus', 9],
+    ['Covenant Chapel', 'White Hall Auditorium', 25], ['Dominion Chapel', 'Ogden Hall Auditorium', 0],
+    ['Glory Land Chapel', 'Winslow Hall', 0], ['Grace Chapel', 'WRA', -1],
+    ['Heir of the Kingdom Chapel', 'BUTH 600 Seater', -1], ['Heritage Church', 'Old Cafeteria', 6],
+    ['Light House Chapel', 'Queen Esther Auditorium', 0], ['Living Springs', 'Samuel Akande Auditorium', 0],
+    ['Maranatha Chapel', 'Sapphire Activity Hall', 20], ['Mount Zion', 'Gideon Troopers', -1],
+    ['Open Heavens Chapel', 'Daniel Hall Auditorium', 8], ['Streams of Joy', 'Bells Hall', 4]
+  ].map((r, i) => ({ id: `WC${String(i + 1).padStart(2, '0')}`, name: r[0], location: r[1], pastor: `Sample Pastor ${String(i + 1).padStart(2, '0')}`, space: r[2] }));
   const courses = [
-    ['COS 409', 'Research Methodology and Technical Report Writing', 'SANUSI FUNMILAYO', 'Soft Eng Group D', 3],
-    ['SEN 401', 'Software Configuration Management and Maintenance', 'BASHWIRA-IDOWU EMMANUELLA', 'Soft Eng Group D', 2],
-    ['INS 401', 'Project Management', 'BASHWIRA-IDOWU EMMANUELLA', 'Soft Eng Group D', 2],
-    ['CSC 401', 'Algorithms and Complexity Analysis', 'Mgbeahuruike Emmanuel Oluchukwu', 'Soft Eng Group D', 2],
-    ['BU-COS 419', 'Agile Development and Scrum', 'Emmanuel Ojo', 'Soft Eng Group D', 2],
-    ['BU-SEN 411', 'Open-Source Systems Development', 'EWOEYA IBUKUN Onaolapo', 'Soft Eng Group D', 2],
-    ['BU-SEN 407', 'Software Measurement and Metrics', 'Adegbola Adesoji', 'Soft Eng Group D', 2],
-    ['BU-SEN 417', 'Human Computer Interaction and Emerging Technologies', 'BASHWIRA-IDOWU EMMANUELLA', 'Soft Eng Group D', 3],
-    ['BU-GST 041', 'Citizenship Orientation', 'Adeleye Olufemi', 'SOFT-ENG', 0],
-    ['BU-GST 403', 'Entrepreneurship and Innovation', 'Akinyemi Folake', 'SOFT-ENG', 2],
-    ['BU-SEN 415', 'Software Testing and Quality Assurance', 'Oladipo Adebayo', 'Soft Eng Group D', 3],
-    ['BU-COS 421', 'Cloud Computing Fundamentals', 'Ibrahim Abdulrahman', 'Soft Eng Group D', 2]
-  ].map((r, i) => ({ id: r[0], title: r[1], instructor: r[2], option: r[3], credit: r[4], year: 4, noGpa: i === 8 }));
-  return { student: { name: 'OLUBUNMI-ALUKO, MOTUNRAYO REHOBOTH', matric: '23/0116', campus: 'Main Campus (Undergraduate)', programme: 'Software Engineering', level: 400, semester: '2026/2027.1', school: 'School of Computing' }, meals, residences, worship, courses };
+    ['COS 409', 'Research Methodology and Technical Report Writing', 'Soft Eng Group D', 3],
+    ['SEN 401', 'Software Configuration Management and Maintenance', 'Soft Eng Group D', 2],
+    ['INS 401', 'Project Management', 'Soft Eng Group D', 2],
+    ['CSC 401', 'Algorithms and Complexity Analysis', 'Soft Eng Group D', 2],
+    ['BU-COS 419', 'Agile Development and Scrum', 'Soft Eng Group D', 2],
+    ['BU-SEN 411', 'Open-Source Systems Development', 'Soft Eng Group D', 2],
+    ['BU-SEN 407', 'Software Measurement and Metrics', 'Soft Eng Group D', 2],
+    ['BU-SEN 417', 'Human Computer Interaction and Emerging Technologies', 'Soft Eng Group D', 3],
+    ['BU-GST 041', 'Citizenship Orientation', 'SOFT-ENG', 0],
+    ['BU-GST 403', 'Entrepreneurship and Innovation', 'SOFT-ENG', 2],
+    ['BU-SEN 415', 'Software Testing and Quality Assurance', 'Soft Eng Group D', 3],
+    ['BU-COS 421', 'Cloud Computing Fundamentals', 'Soft Eng Group D', 2]
+  ].map((r, i) => ({ id: r[0], title: r[1], instructor: `Sample Faculty ${String(i + 1).padStart(2, '0')}`, option: r[2], credit: r[3], year: 4, noGpa: i === 8 }));
+  return { student: { name: 'SAMPLE STUDENT', matric: 'DEMO/2026', campus: 'Main Campus (Undergraduate)', programme: 'Software Engineering', level: 400, semester: '2026/2027.1', school: 'School of Computing' }, meals, residences, worship, courses };
 })();
